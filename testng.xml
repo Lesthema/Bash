@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Bash Test Suite">
+    <listeners>
+        <listener class-name="ExtentReport.Listeners"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Bash">
+        <classes>
+            <class name="Tests.LogInTest">
+            </class>
+        </classes>
+    </test>
+</suite>
