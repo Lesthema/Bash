@@ -12,23 +12,21 @@ import java.io.IOException;
 public class LogInTest extends BaseTests {
 
     public void HomeScreen() throws IOException {
-        TakeScreenShot.takeSnapShot(driver, "Home Page");
-        homePage
+                homePage
                 .verifyHomePage();
         TakeScreenShot.takeSnapShot(driver,"HomePage");
         homePage
                 .profileIcon();
     }
     @Test(dependsOnMethods = "HomeScreen")
-    public void LoginSuccess() throws IOException {
+    public void LoginSuccess() throws IOException, InterruptedException {
         loginPage
                 .enterUsername(readTestData.username)
                 .enterPassword(readTestData.password);
         TakeScreenShot.takeSnapShot(driver,"Log In details");
         loginPage
                 .loginButton()
-                .verifyProfile()
-                .validateLoggedin();
+                .verifyProfile();
         TakeScreenShot.takeSnapShot(driver, "Log Out");
         loginPage
                 .LogOut();
