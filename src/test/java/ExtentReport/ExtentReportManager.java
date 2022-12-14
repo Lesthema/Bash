@@ -21,6 +21,7 @@ public class ExtentReportManager{
         sparkReporter.config().setTheme(Theme.DARK);
         sparkReporter.config().setReportName("Bash Login Report");
 
+        extentReports.setSystemInfo("NAME",("https://bash.com/"));
         extentReports.setSystemInfo("OS",System.getProperty("os.name"));
         extentReports.setSystemInfo("URL",("https://bash.com/"));
         extentReports.setSystemInfo("Execution Machine",System.getProperty("user.name"));
