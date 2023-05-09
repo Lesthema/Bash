@@ -15,7 +15,7 @@ public class BrowserSetup {
 
         if ("chrome".equalsIgnoreCase(browserchoice)){
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("disable-infobars");
+            chromeOptions.addArguments("--remote-allow-origins");
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(chromeOptions);
 
